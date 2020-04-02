@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Link to other pages
 
 function Header() {
   return (
@@ -10,6 +10,7 @@ function Header() {
   )
 }
 
+// STYLING
 const headerStyle = {
   background: '#333',
   color:'#fff',
@@ -21,5 +22,6 @@ const linkStyle = {
   color: '#fff',
   textDecoration: 'none'
 }
+
 
 export default Header;

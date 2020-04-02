@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import PropTypes from 'prop-types';
 
 
@@ -15,19 +14,18 @@ class TodoItem extends Component {
     }
   }
 
-
-    render() {
-      const { id, title} = this.props.todo; // DESTRUCTURING
-        return (
-            <div style={this.getStyle()}>
-              <p>
-                <input type='checkbox' onChange={this.props.markComplete.bind(this, id)}/> {' '}
-                {title}
-                <button onClick={this.props.delTodo.bind(this,id)} style={btnStyle}>x</button>
-              </p>
-            </div>
-        );
-    }
+  render() {
+  const { id, title} = this.props.todo; // DESTRUCTURING for binding below
+    return (
+        <div style={this.getStyle()}>
+          <p>
+            <input type='checkbox' onChange={this.props.markComplete.bind(this, id)}/> {' '}
+            {title}
+            <button onClick={this.props.delTodo.bind(this,id)} style={btnStyle}>x</button>
+          </p>
+        </div>
+    );
+  }
 }
 
 // PropTypes
@@ -37,6 +35,7 @@ TodoItem.propTypes = {
   delTodo:PropTypes.func.isRequired
 }
 
+// STYLE
 const btnStyle = {
   background: '#ff0000',
   color:'#fff',
@@ -46,8 +45,6 @@ const btnStyle = {
   cursor: 'pointer',
   float: 'right'
 }
-
-
 
 
 export default TodoItem;

@@ -15,7 +15,7 @@ class AddTodo extends Component {
 
   onSubmit = (e) => {
     e.preventDefault()
-    this.props.addTodo(this.state.title);
+    this.props.addTodo(this.state.title); // passes title from STATE up to addTodo on App.js
     this.setState({
       title:''
     })
